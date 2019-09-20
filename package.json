@@ -1,0 +1,8 @@
+{
+  "name": "pigeonjs",
+  "version": "0.0.1",
+  "description": "PigeonJS is a tool library for genetic algorithms",
+  "main": "index.js",
+  "author": "Kássio Maia",
+  "license": "MIT"
+}

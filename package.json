@@ -4,5 +4,23 @@
   "description": "PigeonJS is a tool library for genetic algorithms",
   "main": "index.js",
   "author": "Kássio Maia",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "auto": "^9.40.5",
+    "rollup": "^2.18.1",
+    "rollup-plugin-terser": "^6.1.0"
+  },
+  "scripts": {
+    "build": "yarn rollup -c",
+    "version": "npm version `auto version` -m 'Bump version to: %s [skip ci]'",
+    "publish": "npm publish && git push --follow-tags --set-upstream origin $branch",
+    "release": "auto changelog && npm run version && npm run publish && auto release"
+  },
+  "repository": "kassio.maia/pigeonjs",
+  "auto": {
+    "plugins": [
+      "npm"
+    ],
+    "onlyPublishWithReleaseLabel": true
+  }
 }
